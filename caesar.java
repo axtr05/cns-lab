@@ -5,20 +5,12 @@ class C{
         String s=sc.nextLine();
         int k=sc.nextInt();
         String e="",d="";
-        for(char c:s.toCharArray()){
-            if(Character.isLetter(c)){
-                char b=Character.isUpperCase(c)?'A':'a';
-                e+=(char)((c-b+k)%26+b);
-            } 
-            else e+=c;
-        }
-        for(char c:e.toCharArray()){
-            if(Character.isLetter(c)){
-                char b=Character.isUpperCase(c)?'A':'a';
-                d+=(char)((c-b-k+26)%26+b);
-            } 
-            else d+=c;
-        }
+        for(char c:s.toCharArray())
+            e+=(char)((c-'a'+k)%26+'a');
+        
+        for(char c:e.toCharArray())
+            d+=(char)((c-'a'-k+26)%26+'a');
+        
         System.out.println(e);
         System.out.println(d);
     }

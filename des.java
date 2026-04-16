@@ -1,5 +1,5 @@
-import javax.crypto.*;
 import java.util.*;
+import javax.crypto.*;
 
 class DES{
     public static void main(String[] args) throws Exception {
